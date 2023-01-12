@@ -1,0 +1,21 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+    <servlet>
+        <servlet-name>jupiter</servlet-name> <!--dispatcher name-->
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>0</load-on-startup> <!--db-->
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>jupiter</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+</web-app>
+<!--Configuration With web.xml-->
+<!--If you deal with legacy Spring projects it is very common to find XML configuration and until Spring 3.1 the only way to configure the DispatcherServlet was with the WEB-INF/web.xml file. In this case there are two steps required.-->
+<!--1. the Servlet declaration-->
+<!--2. a servlet-mapping declaration-->
